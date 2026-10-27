@@ -1,0 +1,30 @@
+{
+  "name": "Lab 2 - ASP.NET Core 8 + Node 22",
+  "image": "mcr.microsoft.com/devcontainers/dotnet:8.0-bookworm",
+  "features": {
+    "ghcr.io/devcontainers/features/node:2": {
+      "version": "22"
+    }
+  },
+  "forwardPorts": [
+    5050,
+    5173
+  ],
+  "portsAttributes": {
+    "5050": {
+      "label": "ASP.NET Core API",
+      "onAutoForward": "silent"
+    },
+    "5173": {
+      "label": "Frontend - Vite",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-dotnettools.csharp"
+      ]
+    }
+  }
+}
