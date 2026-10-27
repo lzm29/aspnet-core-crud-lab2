@@ -1,0 +1,35 @@
+@baseUrl = http://localhost:5050
+
+### GET - Kiểm tra API đang chạy
+GET {{baseUrl}}/
+
+### GET - Lấy tất cả sản phẩm
+GET {{baseUrl}}/api/products
+
+### POST - Thêm sản phẩm
+POST {{baseUrl}}/api/products
+Content-Type: application/json
+
+{
+  "name": "Bàn phím cơ",
+  "description": "Bàn phím cơ RGB",
+  "price": 890000,
+  "quantity": 8
+}
+
+### GET - Lấy 1 sản phẩm (đổi 1 thành ID nhận được từ POST)
+GET {{baseUrl}}/api/products/1
+
+### PUT - Sửa sản phẩm (đổi 1 thành ID phù hợp)
+PUT {{baseUrl}}/api/products/1
+Content-Type: application/json
+
+{
+  "name": "Bàn phím cơ bản mới",
+  "description": "Đã nâng cấp switch",
+  "price": 990000,
+  "quantity": 5
+}
+
+### DELETE - Xóa sản phẩm (đổi 1 thành ID phù hợp)
+DELETE {{baseUrl}}/api/products/1
